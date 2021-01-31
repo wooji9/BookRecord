@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:shape="rectangle">
+
+    <!--바탕 색깔-->
+    <solid android:color="#fff"/>
+
+    <!--모서리를 얼마나 둥글게 할것인지 그 값을 설정-->
+    <corners
+        android:radius="12dp"/>
+
+    <!-- 경계선의 두께와 색상을 지정함-->
+    <stroke android:width="3dp"
+        android:color="#A8A8A8"/>
+
+</shape>

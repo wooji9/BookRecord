@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlowerActivity"
+    >
+
+    <!-- 상단 레이아웃-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:id="@+id/firstLayout">
+
+        <!-- 포인트 레이아웃 -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/point_border"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/point" />
+
+            <TextView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="8dp"
+                android:text="100" />
+
+        </FrameLayout>
+
+        <!--상점 레이아웃-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            >
+
+            <TextView
+                android:id="@+id/maket_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="상점"
+                android:textColor="#7F7F80"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/maket_i"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/maket" />
+        </LinearLayout>
+
+    </LinearLayout> <!--상단 레이아웃 끝-->
+
+    <!--중간 꽃 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/flowerView"
+        android:layout_below="@id/firstLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 꽃"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/flower2"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/flowerView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나의 꽃 목록"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:background="#aaf"
+            android:id="@+id/flowerListTitle"/>
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flowerListTitle"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
