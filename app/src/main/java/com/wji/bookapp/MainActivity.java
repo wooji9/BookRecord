@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
 
     Button homeButton, flowerButton, recordButton, profileButton;
-    LinearLayout notice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,27 +23,24 @@ public class MainActivity extends AppCompatActivity {
         flowerButton = findViewById(R.id.flowerButton);
         recordButton = findViewById(R.id.recordButton);
         profileButton = findViewById(R.id.profileButton);
-        notice = findViewById(R.id.notice);
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notice.setVisibility(view.GONE);
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
 
-        /*flowerButton.setOnClickListener(new View.OnClickListener() {
+        flowerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notice.setVisibility(view.GONE);
                 Intent intent = new Intent(MainActivity.this, FlowerActivity.class);
                 startActivity(intent);
             }
         });
 
-        recordButton.setOnClickListener(new View.OnClickListener() {
+        /*recordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 notice.setVisibility(view.GONE);
