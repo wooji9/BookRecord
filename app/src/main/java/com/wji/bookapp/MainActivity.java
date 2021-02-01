@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, FlowerActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 notice.setVisibility(view.GONE);
                 Intent intent = new Intent(MainActivity.this, RecordActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 notice.setVisibility(view.GONE);
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(intent);
+                finish();
             }
         });*/
     }

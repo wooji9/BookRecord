@@ -2,6 +2,7 @@ package com.wji.bookapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -20,6 +21,7 @@ import vo.BookVO;
 
 public class HomeActivity extends AppCompatActivity {
 
+    Button flowerButton, recordButton, profileButton;
     public static EditText et_search; // 검색어
 
     Button btn_search; // 검색 버튼
@@ -38,6 +40,39 @@ public class HomeActivity extends AppCompatActivity {
         btn_search = findViewById(R.id.btn_search);
         bookSearchList = findViewById(R.id.bookSearchList);
         parser = new Parser();
+
+        flowerButton = findViewById(R.id.flowerButton);
+        recordButton = findViewById(R.id.recordButton);
+        profileButton = findViewById(R.id.profileButton);
+
+        flowerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, FlowerActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        /*recordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notice.setVisibility(view.GONE);
+                Intent intent = new Intent(MainActivity.this, RecordActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notice.setVisibility(view.GONE);
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });*/
 
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
