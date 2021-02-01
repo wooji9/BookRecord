@@ -42,20 +42,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*recordButton.setOnClickListener(new View.OnClickListener() {
+        recordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notice.setVisibility(view.GONE);
-                Intent intent = new Intent(MainActivity.this, RecordActivity.class);
+                Intent intent = new Intent(MainActivity.this, RecordMActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        profileButton.setOnClickListener(new View.OnClickListener() {
+        /*profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                notice.setVisibility(view.GONE);
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(intent);
                 finish();
