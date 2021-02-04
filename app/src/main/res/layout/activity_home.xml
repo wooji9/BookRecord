@@ -64,25 +64,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <EditText
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:id="@+id/et_search"
-            android:hint="책 검색"
-            android:layout_weight="1"
-            android:imeOptions="actionSearch"/>
+            android:id="@+id/btn_insert"
+            android:text="책 추가"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="검색"
-            android:id="@+id/btn_search"/>
+
     </LinearLayout>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bookSearchList"/>
+        android:id="@+id/bookSaveList"/>
 
 </LinearLayout>

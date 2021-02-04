@@ -1,7 +1,7 @@
 package parse;
 
 
-import com.wji.bookapp.HomeActivity;
+import com.wji.bookapp.BookSearchActivity;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 import vo.BookVO;
 
 public class Parser {
-    
+
     //xml파싱( 웹에서 요소(제목, 저자, 가격..)을 검색하여 vo에 담는 과정)을 위한 클래스
 
     BookVO vo;
@@ -24,7 +24,7 @@ public class Parser {
 
     public ArrayList<BookVO> connectNaver(ArrayList<BookVO> list){
         try{
-            myQuery = URLEncoder.encode(HomeActivity.et_search.getText().toString(),"UTF8"); // 검색을 받아서 서버 측 URL로 이동
+            myQuery = URLEncoder.encode(BookSearchActivity.et_search.getText().toString(),"UTF8"); // 검색을 받아서 서버 측 URL로 이동
 
             int count = 100; // 검색결과를 100건 표시
 
